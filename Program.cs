@@ -6,14 +6,17 @@ namespace Homework_4._8_Task_2
     {
         static void Main(string[] args)
         {
-            int arrayMaxValue;
+            int arrayMaxValue = -1;
             int number;
             int i;
             int result;
             
-            Console.WriteLine("Enter array lenght 1 to 255: ");
-            arrayMaxValue = int.Parse(Console.ReadLine());
-
+            while (arrayMaxValue < 1 || arrayMaxValue > 255)
+            {
+                Console.WriteLine("Enter array lenght 1 to 255: ");
+                arrayMaxValue = int.Parse(Console.ReadLine());
+            }
+           
             int[] array = new int[arrayMaxValue];
 
             Console.WriteLine($"Enter {arrayMaxValue} nubers");
